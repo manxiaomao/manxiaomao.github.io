@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- 
+	    @B@qr                                           
+	    q v@B@Br     rvr777rvr                          
+	    1   @B@M0PB@@B@@@B@B@B@@@Fr    qOM@BMB@E8r      
+	    7    U71M@B@B@B@B@B@B@B@@@BB5@B@B@B@J   J7      
+	    J   7F@@@B@B@B@@@B@B@B@@@B@@@YUNL       B       
+	    U  M@@@@B@B@B@B@B@B@B@B@B@B@B@1r       S        
+	    0YOB@B@B@B@B@B@B@B@B@B@B@B@B@B@G      ir        
+	    JZB@B@B@B@B@B@B@B@B@B@B@B@B@B@B@O     2         
+	    SB@B@B@B@B@B@B漫小猫@B@B@B@B@B@B@B@U   X          
+	    B@B@B@B@B@B@B@B@B@B@B@B@B@B@B@B@BZ  k           
+	   r@B@@@@@B@B@B@B@B@B@B@B@B@B@@@BB1PFur    8@@@     
+	    B@LkB@B@@@B@B@B@B@B@B@B@B@BBFL7FBXu    8B@BM    
+	    BBOLruMB@@@B@B@B@B@B@@@B@PL718@B@YNBi  P@B@M    
+	    U@B@MuiYM@B@B@B@B@B@B@M2rL0@B@B@BiM@O  G@@Bq    
+	     P@B@B@UtJ@B@B@B@@@BMYruMB@@@B@B27@BEU@@@B@     
+	    LGN@@@B@@2r0B@B@B@OLrSB@@@B@B@BBv1B@EZB@BL      
+	   LMOvruu1M@B@XXB@B@NFM@B@B@B@B@@Gv8MJ0S7r         
+	             MXM.URL:WWW.LXBKW.COM                   
+-->	
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" itemprop="description" content="漫小猫个人信息" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/mxm.css" />
+		<!-- Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- jquery 核心 JavaScript 文件 -->
+		<script src="js/jquery.min.js"></script>	
+		<!-- Bootstrap 核心 JavaScript 文件 -->
+		<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<title>漫小猫个人主页</title>
+	</head>
+	<body oncopy="return false;">
+		<div class="container-fluid dropdown">
+			<div id="mxm">
+				<!--按键面-->
+				<div id="man">
+					<div id="logo">
+						<div id="zhuan">
+							<img src="http://gxh.vip.qq.com/xydata/faceAddon/item/2103/list_50.png">
+						<img src="http://q1.qlogo.cn/g?b=qq&nk=2535080855&s=100"/>
+						</div>
+					</div>
+					<ul id="menu">
+	                    <li>
+	                        <a href='javascript:void(0)' menuURL="man.html">个人信息</a>
+	                    </li>
+	                    <li>
+	                        <a href='javascript:void(0)' menuURL="works.html">个人作品</a>
+	                    </li>
+	                    <li>
+	                        <a href='javascript:void(0)' menuURL="contact.html">社交导航</a>
+	                    </li>
+	                    <li>
+	                        <a href='javascript:void(0)' menuURL="about.html">关于</a>
+	                    </li>
+	                    <li>
+	                        <a href='javascript:void(0)' menuURL="sponsor.html">投食</a>
+	                    </li>
+               		 </ul>
+				</div>
+				<!--信息面-->
+				<div id="message"></div>
+				<div id="mcm"></div>
+			</div>
+		</div>
+		<p class="text-center navbar-fixed-bottom copyright">Copyright &copy; 2018-2018<a class="mxm" target="_blank" href="http://www.lxbkw.com" style="color: #777;font-style: inherit;">漫小猫</a>. All rights reserved.</p>
+	</body>
+	<script type="text/javascript" src="js/jquery.vegas.min.js"></script>
+		<script type="text/javascript" src="js/mxm.js"></script>
+		<script type="text/javascript">
+			$('#menu').on('click','li a',function() {
+					// 去掉所有菜单的active样式
+					$('#menu').find('li a').removeClass('active');
+					// 从菜单a标签上获取属性menuURL
+					var url = $(this).attr('menuURL');
+					if (url) {
+						$('#message').load(url);
+					}
+					$(this).addClass('active');
+				});
+			$("li a:eq(0)").click();
+		</script>
+</html>

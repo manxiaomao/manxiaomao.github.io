@@ -1,0 +1,380 @@
+<!--
+	作者：漫小猫
+	QQ ：2535080855
+	博客：www.xxvvv.cn
+ 邮箱：manxiaomao@qq.com
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta itemprop="name" content="漫小猫"/>
+                <meta itemprop="image" content="http://q1.qlogo.cn/g?b=qq&nk=2535080855&s=100" />
+                <meta name="description" itemprop="description" content="漫小猫导航主页网站" />
+		<title>漫小猫导航</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+				<!-- background:#000; -->
+			}
+			
+			
+			body {
+			background: #000;
+			background-attachment: fixed;
+			word-wrap: break-word;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			background-size: cover;
+			background-repeat: no-repeat
+			}
+ 
+			ul {
+			list-style: none
+			}
+ 
+			.cb-slideshow li:nth-child(1) span {
+				background-image: url(http://api.brhsm.cn/tp.png?1)
+			}
+			 
+			.cb-slideshow li:nth-child(2) span {
+				background-image: url(http://api.brhsm.cn/tp.png?2)
+			}
+			 
+			.cb-slideshow li:nth-child(3) span {
+				background-image: url(http://api.brhsm.cn/tp.png?3)
+			}
+			 
+			.cb-slideshow li:nth-child(4) span {
+				background-image: url(http://api.brhsm.cn/tp.png?4)
+			}
+			 
+			.cb-slideshow li:nth-child(5) span {
+				background-image: url(http://api.brhsm.cn/tp.png?5)
+			}
+			 
+			.cb-slideshow li:nth-child(6) span {
+				background-image: url(http://api.brhsm.cn/tp.png?6)
+			}
+ 
+			.cb-slideshow,.cb-slideshow:after {
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: -2
+			}
+			 
+			.cb-slideshow:after {
+				content: ''
+			}
+			 
+			.cb-slideshow li span {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: transparent;
+				background-size: cover;
+				background-position: 50% 50%;
+				background-repeat: none;
+				opacity: 0;
+				z-index: -2;
+				-webkit-backface-visibility: hidden;
+				-webkit-animation: imageAnimation 36s linear infinite 0s;
+				-moz-animation: imageAnimation 36s linear infinite 0s;
+				-o-animation: imageAnimation 36s linear infinite 0s;
+				-ms-animation: imageAnimation 36s linear infinite 0s;
+				animation: imageAnimation 36s linear infinite 0s
+			}
+			 
+			.cb-slideshow li:nth-child(2) span {
+				-webkit-animation-delay: 6s;
+				-moz-animation-delay: 6s;
+				-o-animation-delay: 6s;
+				-ms-animation-delay: 6s;
+				animation-delay: 6s
+			}
+			 
+			.cb-slideshow li:nth-child(3) span {
+				-webkit-animation-delay: 12s;
+				-moz-animation-delay: 12s;
+				-o-animation-delay: 12s;
+				-ms-animation-delay: 12s;
+				animation-delay: 12s
+			}
+			 
+			.cb-slideshow li:nth-child(4) span {
+				-webkit-animation-delay: 18s;
+				-moz-animation-delay: 18s;
+				-o-animation-delay: 18s;
+				-ms-animation-delay: 18s;
+				animation-delay: 18s
+			}
+			 
+			.cb-slideshow li:nth-child(5) span {
+				-webkit-animation-delay: 24s;
+				-moz-animation-delay: 24s;
+				-o-animation-delay: 24s;
+				-ms-animation-delay: 24s;
+				animation-delay: 24s
+			}
+			 
+			.cb-slideshow li:nth-child(6) span {
+				-webkit-animation-delay: 30s;
+				-moz-animation-delay: 30s;
+				-o-animation-delay: 30s;
+				-ms-animation-delay: 30s;
+				animation-delay: 30s
+			}
+			 
+			@-webkit-keyframes imageAnimation {
+				0% {
+					opacity: 0;
+					-webkit-animation-timing-function: ease-in
+				}
+			 
+				8% {
+					opacity: 1;
+					-webkit-transform: scale(1.05);
+					-webkit-animation-timing-function: ease-out
+				}
+			 
+				17% {
+					opacity: 1;
+					-webkit-transform: scale(1.1) rotate(0)
+				}
+			 
+				25% {
+					opacity: 0;
+					-webkit-transform: scale(1.1) rotate(0)
+				}
+			 
+				100% {
+					opacity: 0
+				}
+			}
+			
+			
+			
+			div:nth-child(1){
+				width: 280px;
+				height: 800px;
+				position: fixed;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				transform-style: preserve-3d;
+				animation: play 30s linear infinite;
+			}
+			div:nth-child(2){
+			 width: 600px;
+				height: 400px;
+				border-radius: 30px;
+				background: rgba(30,144,255, 0.7);
+			 position: fixed;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				z-index:2;
+				text-align:center;
+			}	
+			div:nth-child(1) img{
+				width: 280px;
+				height: 400px;
+				border-radius: 30px;
+				position:absolute;
+			}
+			
+			#mann img{
+				width: 130px;
+				height:130px;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				border-radius: 80px;
+				<!-- position:absolute; -->
+				
+			}
+			div img:nth-child(1){transform: rotateY(0deg) translatez(650px);}
+			div img:nth-child(2){transform: rotateY(36deg) translatez(650px);}
+			div img:nth-child(3){transform: rotateY(72deg) translatez(650px);}
+			div img:nth-child(4){transform: rotateY(108deg) translatez(650px);}
+			div img:nth-child(5){transform: rotateY(144deg) translatez(650px);}
+			div img:nth-child(6){transform: rotateY(180deg) translatez(650px);}
+			div img:nth-child(7){transform: rotateY(216deg) translatez(650px);}
+			div img:nth-child(8){transform: rotateY(252deg) translatez(650px);}
+			div img:nth-child(9){transform: rotateY(288deg) translatez(650px);}
+			div img:nth-child(10){transform: rotateY(324deg) translatez(650px);}
+            /*div img:nth-child(11){transform: rotateY(324deg) translatez(650px);}*/
+			@keyframes play{
+				0%{
+					transform: rotateX(-20deg) rotateY(0deg);
+				}
+				25%{
+					transform: rotateX(-20deg) rotateY(180deg);
+				}
+				50%{
+					transform: rotateX(-20deg) rotateY(360deg);
+				}
+				75%{
+					transform: rotateX(-20deg) rotateY(540deg);
+				}
+				100%{
+					transform: rotateX(-20deg) rotateY(720deg);
+				}
+			}
+		#mao img:hover{			
+				width:400px;
+				height: 600px;
+				border-top:5px solid red;
+    border-radius: 30px;
+                <!-- background: #00f ; -->
+				}
+				
+		#mann img:hover{	
+				width: 180px;
+				height:180px;
+				border-radius: 130px;
+		animation: tupian 1s linear infinite;
+             }		
+		@keyframes tupian{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(-380deg);}
+			}	
+			
+		#mann p{
+		           font-size:30px;
+			   color:#ff0000;
+		}
+		
+		#mann p:hover{	
+		animation: wz 1s ;
+             }	
+		@keyframes wz{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(-380deg);}
+			} 
+		
+	.mxm{
+	            width: 100%;
+				height:64px;
+				<!-- background:#000; -->
+				
+	}		
+	.btn1{
+	           
+	             background:-webkit-linear-gradient(left,  #e41242 0%,#0087ff 80%);
+                     width: 190px;
+                     height: 45px;
+                     float: left;
+		     border-radius: 20px;
+		     border:5px solid #000;
+		     font-size:30px;
+		     text-decoration:none;
+	}
+	.btn2{
+	           
+	             background:-webkit-linear-gradient(left,  #11d805 0%,#d1ff00 80%);
+                 width: 190px;
+                 height: 45px;
+                 float: left;
+				 border-radius: 20px;
+				 border:5px solid #000;
+				 font-size:30px;
+				 text-decoration:none;
+	}
+	.btn3{
+	           
+	             background:-webkit-linear-gradient(left,  #00f 0%,#e41242 80%);
+                 width: 190px;
+                 height: 45px;
+                 float: left;
+				 border-radius: 20px;
+				 border:5px solid #000;
+				 font-size:30px;
+				 text-decoration:none;
+	}
+	
+	.mxm a:hover{
+	animation: wzz 2s;
+	}
+    @keyframes wzz{
+				0%{
+					transform: rotateX(-20deg) rotateY(0deg);
+				}
+				25%{
+					transform: rotateX(20deg) rotateY(90deg);
+				}
+				50%{
+					transform: rotateX(-20deg) rotateY(180deg);
+				}
+				75%{
+					transform: rotateX(20deg) rotateY(270deg);
+				}
+				100%{
+					transform: rotateX(-20deg) rotateY(360deg);
+				}
+			} 
+		</style>	
+
+	</head>
+	<body>
+		<div id="mao">
+			<img src="./img/1.jpg" />
+			<img src="./img/2.jpg" />
+			<img src="./img/3.jpg" />
+			<img src="./img/4.jpg" />
+			<img src="./img/5.jpg" />
+			<img src="./img/6.jpg" />
+			<img src="./img/7.jpg" />
+			<img src="./img/8.jpg" />
+			<img src="./img/9.jpg" />
+			<img src="./img/10.jpg" />
+			<img src="./img/0.jpg" />
+			<a href="#"></a>
+		</div>
+		<div id="mann">
+		<img title="别碰我！" src="http://q.qlogo.cn/headimg_dl?bs=qq&dst_uin=2535080855&src_uin=qq.feixue.me&fid=blog&spec=100">
+		<br>
+		<p>漫小猫</p>
+		<br><br>
+		<hr>
+		<br><br>
+		<div class="mxm">
+                <a class="btn1" title="要加群吗？" href="https://jq.qq.com/?_wv=1027&k=5ZFqlk5" >QQ群</a>
+	        <a class="btn2" title="要联系我？" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2535080855&amp;site=qq&amp;menu=yes" >QQ</a>
+                <a class="btn3" title="要去博客吗？" href="http://www.lxbkw.com" >博客</a>
+	        </div>
+		</div>
+	<ul class="cb-slideshow">
+		<li>
+        <span>1</span></li>
+		<li>
+	<span>2</span></li>
+		<li>
+        <span>3</span></li>
+		<li>
+        <span>4</span></li>
+		<li>
+        <span>5</span></li>
+		<li>
+        <span>6</span></li>
+		</ul>
+		<audio src="./a.mp3" autoplay="autoplay"></audio>
+	</body>
+</html>

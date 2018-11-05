@@ -1,0 +1,196 @@
+/**
+ * 作者:漫小猫
+ * QQ:2535080855
+ * 博客:www.lxbkw.com
+ * 说明:请尊重作者的劳动成果。
+ */
+		
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.home::-webkit-scrollbar {
+	    width: 20px;    
+	    height: 1px;
+		}
+		.home::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: #0095ff;
+		background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+		}
+		.home::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+		border-radius: 30px;
+		background: #EDEDED;
+		}
+		#mxm{
+				width: 800px;
+				height: 500px;
+				border-radius: 30px;
+			 	position: fixed;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				z-index:2;
+				text-align:center;
+		}
+		#man{
+			width: 250px;
+			height: 500px;
+			float: left;
+			border: 2px #0cd0e5 solid;
+			border-top-left-radius: 30px;
+			border-bottom-left-radius: 30px;
+			background-color:rgba(0, 0, 0, 0.84);
+		}
+		#message{
+			width: 550px;
+			height: 500px;
+			float: right;
+			border-top-right-radius: 30px;
+			border-bottom-right-radius: 30px;
+			border: 2px #0cd0e5 solid;
+		}
+		#logo{
+			height: 120px;
+			border-top-left-radius: 28px;
+			border-bottom: 5px #0cd0e5 solid;
+			background-color: #03A9F4;
+			/*background-color: rgba(33, 168, 228, 0.65);*/
+		}
+		#zhuan{
+		width: 120px;
+		height: 120px;
+		position: absolute;
+        left: 62px;
+		}
+		#zhuan img:nth-child(1){
+		width: 110px;
+		height: 110px;
+		position: absolute;
+		}
+ 		#zhuan img:nth-child(2){
+		width: 110px;
+		height: 110px;
+		}
+
+		#zhuan img{
+			width: 110px;
+			height: 110px;
+			border: 5px rgba(158, 158, 158, 0.79) solid;
+			border-radius: 100px;
+		}
+		#zhuan:hover{
+			animation: zhuan 1s linear infinite;
+		}
+		@keyframes zhuan{
+			from{transform: rotate(0deg);}
+			to{transform: rotate(380deg);}
+		}
+		
+		#menu{
+			width: 100%;
+			height: 100%;
+		}
+		#menu li{
+			width: 100%;
+			height: 30px;
+			list-style:none;
+			border-bottom: 2px #FFF solid;
+		}
+		#menu li:hover{
+			background-color:rgba(158, 158, 158, 0.64);
+		}
+		#menu li a{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			font-size: medium;
+			font-style: normal;
+			text-decoration:none;
+		}
+		#mcm{
+			width:125px;
+			height:118px;
+			position: absolute;
+			top:-100px;
+			overflow:hidden;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-image: url(http://www.lxbkw.com/v/rumia.png);
+			animation: xiaom 10s linear infinite;
+		}
+		@keyframes xiaom{
+		0%   {left:0px;}
+		25%  {left:350px;}
+		50%  {left:700px;}
+		75%  {left:350px;}
+		100% {left:0px;}
+		}
+		
+		/*===================================*/
+		@media(max-width:768px){
+   		#mxm{
+				width: 320px;
+				height: 500px;
+		}
+		#man{
+			width: 320px;
+			height: 150px;
+			float: left;
+			border: 2px #0cd0e5 solid;
+			border-top-left-radius: 30px;
+			border-top-right-radius: 30px;
+			border-bottom-left-radius: 0px;
+		}
+		#logo{
+			height: 90px;
+			border-top-left-radius: 28px;
+			border-top-right-radius: 28px;
+			border-bottom: 5px #0cd0e5 solid;
+			background-color: #fb7299;
+			/*background-color: rgba(33, 168, 228, 0.48);*/
+			
+		}
+		#zhuan{
+        left: 99px;
+        top:-23px;
+		}
+		#message{
+			width: 320px;
+			height: 350px;
+			float: right;
+			border-top-right-radius: 0px;
+			border-bottom-left-radius: 30px;
+			border-bottom-right-radius: 30px;
+			/*background-color: chartreuse;*/
+		}
+		#menu li{
+			width: 50%;
+			float: left;
+			 /* Safari 5.1 - 6.0 */
+			  background: -webkit-gradient(linear, 100% 0, 0 0, from(red), to(blue));
+			  background: -webkit-linear-gradient(right, red, blue);
+			  background: -moz-linear-gradient(right, red, blue);
+			  background: -o-linear-gradient(right, red, blue);
+			  background: linear-gradient(right, red, blue); /* Opera 11.1 - 12.0 */
+			 /* Firefox 3.6 - 15 */
+		}
+		#menu li:nth-child(1){
+			border-right: 2px #0cd0e5 solid;
+		}
+		#menu li:nth-child(3){
+			border-right: 2px #0cd0e5 solid;
+		}
+		#menu li:nth-child(5){
+			display: none;
+		}
+		#mcm{
+			width: 0px;
+			height: 0px;
+			background-image:none;
+			animation:none;
+		}
+	}
