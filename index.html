@@ -29,17 +29,16 @@
 		<meta name="format-detection" content="telephone=no">
 		<meta name="description" itemprop="description" content="漫小猫个人信息" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="css/mxm.css" />
 		<!-- Bootstrap 核心 CSS 文件 -->
-		<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<!-- jquery 核心 JavaScript 文件 -->
-		<script src="js/jquery.min.js"></script>	
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>	
 		<!-- Bootstrap 核心 JavaScript 文件 -->
-		<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<title>漫小猫个人主页</title>
 	</head>
-	<body oncopy="return false;">
+	<body>
 		<div class="container-fluid dropdown">
 			<div id="mxm">
 				<!--按键面-->
@@ -73,12 +72,19 @@
 				<div id="mcm"></div>
 			</div>
 		</div>
+		<div id="landlord" class="dropdown">
+    	<canvas id="live2d" width="280" height="350"></canvas>
+		</div>
 		<p class="text-center navbar-fixed-bottom copyright">Copyright &copy; 2018-2018<a class="mxm" target="_blank" href="http://www.lxbkw.com" style="color: #777;font-style: inherit;">漫小猫</a>. All rights reserved.</p>
 	</body>
+	<script src="js/live2d.js"></script>
+	<script>
+	loadlive2d("live2d", "./Violet/xxb.json");
+	</script>
 	<script type="text/javascript" src="js/jquery.vegas.min.js"></script>
-		<script type="text/javascript" src="js/mxm.js"></script>
-		<script type="text/javascript">
-			$('#menu').on('click','li a',function() {
+	<script type="text/javascript" src="js/mxm.js"></script>
+	<script type="text/javascript">
+		$('#menu').on('click','li a',function() {
 					// 去掉所有菜单的active样式
 					$('#menu').find('li a').removeClass('active');
 					// 从菜单a标签上获取属性menuURL
@@ -88,6 +94,6 @@
 					}
 					$(this).addClass('active');
 				});
-			$("li a:eq(0)").click();
-		</script>
+		$("li a:eq(0)").click();
+	</script>
 </html>
