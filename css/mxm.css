@@ -224,7 +224,7 @@
 		#jz div:nth-child(1){
 			width: 50%;
 			height: 100%;
-			background-image: url(img/a.png);
+			background-image: url(./img/a.png);
 			background-size: 100% 100%;
 			position: fixed;
 			top: 0px;
@@ -234,7 +234,7 @@
 		#jz div:nth-child(2){
 			width: 500px;
 			height: 500px;
-			background-image: url(img/blackhole.png);
+			background-image: url(./img/blackhole.png);
 			background-size: 100% 100%;
 			border-radius: 360px;
 			position: fixed;
@@ -249,7 +249,7 @@
 		#an{
 			width: 120px;
 			height: 120px;
-			background-image: url(img/1.jpg);
+			background-image: url(./img/1.jpg);
 			background-size: 100% 100%;
 			border-radius: 360px;
 			margin: 187px auto;
@@ -260,7 +260,7 @@
 		#jz div:nth-child(3){
 			width: 50%;
 			height: 100%;
-			background-image: url(img/b.png);
+			background-image: url(./img/b.png);
 			background-size: 100% 100%;
 			position: fixed;
 			top: 0px;
@@ -278,12 +278,12 @@
 		/*===================================*/
 		@media(max-width:768px){
 			#jz div:nth-child(1){
-				background-image: url(img/c.png);
+				background-image: url(./img/c.png);
 			}
 			#jz div:nth-child(2){
 				margin: auto -66px;
 			}
 			#jz div:nth-child(3){
-				background-image: url(img/d.jpg);
+				background-image: url(./img/d.jpg);
 			}
 		}
