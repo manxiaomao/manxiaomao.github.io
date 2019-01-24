@@ -208,3 +208,82 @@
 		height: 1px;
 		}
 	}
+	
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		li{
+			list-style:none;
+		}
+		#jz{
+			width: 100%;
+			height: 100%;
+			float: left;
+		}
+		#jz div:nth-child(1){
+			width: 50%;
+			height: 100%;
+			background-image: url(img/a.png);
+			background-size: 100% 100%;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			z-index: 214748364;
+		}
+		#jz div:nth-child(2){
+			width: 500px;
+			height: 500px;
+			background-image: url(img/blackhole.png);
+			background-size: 100% 100%;
+			border-radius: 360px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			z-index: 2147483645;
+			animation: zhuan 1s linear infinite;
+		}
+		#an{
+			width: 120px;
+			height: 120px;
+			background-image: url(img/1.jpg);
+			background-size: 100% 100%;
+			border-radius: 360px;
+			margin: 187px auto;
+			z-index: 2147483646;
+			border: 2px #000 solid;
+			animation: fuan 1s linear infinite;
+		}
+		#jz div:nth-child(3){
+			width: 50%;
+			height: 100%;
+			background-image: url(img/b.png);
+			background-size: 100% 100%;
+			position: fixed;
+			top: 0px;
+			right: 0px;
+			z-index: 214748364;
+		}
+		@keyframes zhuan{
+			from{transform: rotate(0deg);}
+			to{transform: rotate(380deg);}
+		}
+		@keyframes fuan{
+			from{transform: rotate(-0deg);}
+			to{transform: rotate(-380deg);}
+		}
+		/*===================================*/
+		@media(max-width:768px){
+			#jz div:nth-child(1){
+				background-image: url(img/c.png);
+			}
+			#jz div:nth-child(2){
+				margin: auto -66px;
+			}
+			#jz div:nth-child(3){
+				background-image: url(img/d.jpg);
+			}
+		}
