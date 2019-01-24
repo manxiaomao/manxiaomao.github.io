@@ -37,6 +37,8 @@
 		<!-- Bootstrap 核心 JavaScript 文件 -->
 		<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<title>漫小猫个人主页</title>
+		<script type="text/javascript" src="js/jquery.vegas.min.js"></script>
+		<script type="text/javascript" src="js/mxm.js"></script>
 	</head>
 	<body>
 		<div id="jz">
@@ -44,61 +46,26 @@
 			<div id="tx"><p id="an" onclick="an()"></p></div>
 			<div id="yt"></div>
 		</div>
-		<div class="container-fluid dropdown">
-			<div id="mxm">
-				<!--按键面-->
-				<div id="man">
-					<div id="logo">
-						<div id="zhuan">
-							<img src="http://gxh.vip.qq.com/xydata/faceAddon/item/2103/list_50.png">
-						<img src="http://q1.qlogo.cn/g?b=qq&nk=2535080855&s=100"/>
-						</div>
-					</div>
-					<ul id="menu">
-	                    <li>
-	                        <a href='javascript:void(0)' menuURL="man.html">个人信息</a>
-	                    </li>
-	                    <li>
-	                        <a href='javascript:void(0)' menuURL="works.html">个人作品</a>
-	                    </li>
-	                    <li>
-	                        <a href='javascript:void(0)' menuURL="contact.html">社交导航</a>
-	                    </li>
-	                    <li>
-	                        <a href='javascript:void(0)' menuURL="about.html">关于</a>
-	                    </li>
-	                    <li>
-	                        <a href='javascript:void(0)' menuURL="sponsor.html">投食</a>
-	                    </li>
-               		 </ul>
-				</div>
-				<!--信息面-->
-				<div id="message"></div>
-				<div id="mcm"></div>
-			</div>
-		</div>
-		<div id="landlord" class="dropdown">
-    	<canvas id="live2d" width="280" height="350"></canvas>
-		</div>
-		<p class="text-center navbar-fixed-bottom copyright">Copyright &copy; 2018-2019<a class="mxm" target="_blank" href="http://www.lxbkw.com" style="color: #777;font-style: inherit;">漫小猫</a>. All rights reserved.</p>
+		<div id="index_mxm"></div>
 	</body>
-	<script src="js/live2d.js"></script>
 	<script>
-	loadlive2d("live2d", "./Violet/xxb.json");
-	</script>
-	<script type="text/javascript" src="js/jquery.vegas.min.js"></script>
-	<script type="text/javascript" src="js/mxm.js"></script>
-	<script type="text/javascript">
-		$('#menu').on('click','li a',function() {
-					// 去掉所有菜单的active样式
-					$('#menu').find('li a').removeClass('active');
-					// 从菜单a标签上获取属性menuURL
-					var url = $(this).attr('menuURL');
-					if (url) {
-						$('#message').load(url);
-					}
-					$(this).addClass('active');
-				});
-		$("li a:eq(0)").click();
+		$(function () {
+		 $.ajax({
+		  url: "mxm.html",
+		  type: 'GET',
+		  data: {},
+		  success: function (response) {
+		   alert(response);
+		   $('#index_mxm').html(response);
+		   //请求完成，隐藏模态框
+		 	setTimeout("an()", 3000);
+		  },
+		  error: function () {
+		  	//失败显示
+		   $('#index_mxm').html('server error...');
+		  }
+		 })
+		
+		});
 	</script>
 </html>
