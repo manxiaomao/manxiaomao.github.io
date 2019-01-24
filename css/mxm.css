@@ -224,7 +224,7 @@
 		#jz div:nth-child(1){
 			width: 50%;
 			height: 100%;
-			background-image: url(./img/a.png);
+			background-image: url(img/a.png);
 			background-size: 100% 100%;
 			position: fixed;
 			top: 0px;
@@ -234,7 +234,7 @@
 		#jz div:nth-child(2){
 			width: 500px;
 			height: 500px;
-			background-image: url(./img/blackhole.png);
+			background-image: url(/img/blackhole.png);
 			background-size: 100% 100%;
 			border-radius: 360px;
 			position: fixed;
@@ -260,7 +260,7 @@
 		#jz div:nth-child(3){
 			width: 50%;
 			height: 100%;
-			background-image: url(./img/b.png);
+			background-image: url(../img/b.png);
 			background-size: 100% 100%;
 			position: fixed;
 			top: 0px;
