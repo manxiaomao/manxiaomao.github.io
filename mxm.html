@@ -42,15 +42,15 @@
 	<script type="text/javascript" src="js/jquery.vegas.min.js"></script>
 	<script type="text/javascript" src="js/mxm.js"></script>
 	<script type="text/javascript">
-		$('#menu').on('click','li a',function() {
+		$('#menu').on('click','li',function() {
 					// 去掉所有菜单的active样式
 					$('#menu').find('li a').removeClass('active');
 					// 从菜单a标签上获取属性menuURL
-					var url = $(this).attr('menuURL');
+					var url = $(this).find('a').attr('menuURL');
 					if (url) {
 						$('#message').load(url);
 					}
-					$(this).addClass('active');
+					$(this).find('a').addClass('active');
 				});
 		$("li a:eq(0)").click();
 	</script>
